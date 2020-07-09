@@ -24,13 +24,23 @@ function promptUser() {
     {
       type: "input",
       name: "usage",
-      message: "What is your favorite food?",
+      message: "Describe your application's inteded use.",
     },
     {
-      type: "input",
+      type: "list",
+      message: "Choose a license for the project:",
       name: "license",
-      message:
-        "Enter your license information as you would like it rendered to the page",
+      choices: [
+        "GNU AGPLv3",
+        "GNU GPLv3",
+        "GNU LGPLv3",
+        "Mozilla Public 2.0",
+        "Apache 2.0",
+        "MIT",
+        "Boost Software 1.0",
+        "The Unlicense",
+        "None",
+      ],
     },
     {
       type: "input",
@@ -46,21 +56,25 @@ function generateREADME(answers) {
 
 ## Table of Contents
 * [Description Of Application](#description-of-application)
+* [Usage Information](#usage-information)
 * [Installation Process](#installation-process)
 * [Application License](#application-license)
 * [How to contribute](#how-to-contribute)
 
 ## Description Of Application
- ${answers.description}
+### ${answers.description}
+
+## Usage Information
+### ${answers.usage}
 
 ##  Installation Process
-${answers.installation}
+### ${answers.installation}
 
 ## Application License
- ${answers.license}
+### ${answers.license}
 
 ## How to contribute
- ${answers.contributing}`;
+### ${answers.contributing}`;
 }
 
 promptUser()
