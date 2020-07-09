@@ -44,21 +44,23 @@ function generateREADME(answers) {
   return `
 # ${answers.title}
 
-## Description of Application
+## Table of Contents
+* [Description Of Application](#description-of-application)
+* [Installation Process](#installation-process)
+* [Application License](#application-license)
+* [How to contribute](#how-to-contribute)
 
-## ${answers.description}
+## Description Of Application
+ ${answers.description}
 
 ##  Installation Process
-
-## ${answers.installation}
+${answers.installation}
 
 ## Application License
-
-## ${answers.license}
+ ${answers.license}
 
 ## How to contribute
-
-## ${answers.contributing}`;
+ ${answers.contributing}`;
 }
 
 promptUser()
