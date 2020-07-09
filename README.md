@@ -1,2 +1,18 @@
-# Readme_Generator
-A README generator powered by node.js
+
+# 
+
+## Description of Application
+
+## 
+
+##  Installation Process
+
+## 
+
+## Application License
+
+## 
+
+## How to contribute
+
+## 
