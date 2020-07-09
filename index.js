@@ -28,7 +28,7 @@ function promptUser() {
     },
     {
       type: "list",
-      message: "Choose a license for the project:",
+      message: "Choose a license for your application from the list below.",
       name: "license",
       choices: [
         "GNU AGPLv3",
@@ -47,6 +47,16 @@ function promptUser() {
       name: "contributing",
       message: "Explain how users can contribute to your application",
     },
+    {
+      type: "input",
+      name: "github",
+      message: "Include a link to your personal github page.",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Include a link to your personal email.",
+    },
   ]);
 }
 
@@ -60,6 +70,7 @@ function generateREADME(answers) {
 * [Installation Process](#installation-process)
 * [Application License](#application-license)
 * [How to contribute](#how-to-contribute)
+* [Questions](#questions)
 
 ## Description Of Application
 ### ${answers.description}
@@ -74,7 +85,13 @@ function generateREADME(answers) {
 ### ${answers.license}
 
 ## How to contribute
-### ${answers.contributing}`;
+### ${answers.contributing}
+
+## Questions
+### For more questions regarding the application feel free to reach out to me at sing [mailto](${answers.email})  
+You can also check out my personal GitHub account here: <${answers.github}>
+
+`;
 }
 
 promptUser()

@@ -7,18 +7,24 @@
 * [Installation Process](#installation-process)
 * [Application License](#application-license)
 * [How to contribute](#how-to-contribute)
+* [Questions](#questions)
 
 ## Description Of Application
-### This application allows a user to generate a readme in the command line using node.js
+### Generates a Readme
 
 ## Usage Information
-### The user is intended to use node.js and the command line to generate a readme via a series of prompts.
+### creates a readme for the user
 
 ##  Installation Process
-### the user would have to copy and paste code and do an npm install in its current state.
+### copy and paste via github
 
 ## Application License
-### GNU LGPLv3
+### Apache 2.0
 
 ## How to contribute
-### as of now the app is intended to independently developed.
+### as of now they can't.
+
+## Questions
+### For more questions regarding the application feel free to reach out to me at sing [mailto](vaughnmurphy89@gmail.com)  
+You can also check out my personal GitHub account here: <https://github.com/proflonghair07>
+
