@@ -14,17 +14,22 @@ function promptUser() {
     {
       type: "input",
       name: "description",
-      message: "Give a brief description of your application?",
+      message: "Give a brief description of your application.",
     },
     {
       type: "input",
       name: "installation",
-      message: "Briefly layout the steps required to install your application?",
+      message: "Briefly layout the steps required to install your application.",
     },
     {
       type: "input",
       name: "usage",
       message: "Describe your application's inteded use.",
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "Give the user some test instructions.",
     },
     {
       type: "list",
@@ -68,6 +73,7 @@ function generateREADME(answers) {
 * [Description Of Application](#description-of-application)
 * [Usage Information](#usage-information)
 * [Installation Process](#installation-process)
+* [Test Instructions](#test-instructions)
 * [Application License](#application-license)
 * [How to contribute](#how-to-contribute)
 * [Questions](#questions)
@@ -81,6 +87,9 @@ function generateREADME(answers) {
 ##  Installation Process
 ### ${answers.installation}
 
+## Test Instructions
+### ${answers.test}
+
 ## Application License
 ### ${answers.license}
 
@@ -88,8 +97,8 @@ function generateREADME(answers) {
 ### ${answers.contributing}
 
 ## Questions
-### For more questions regarding the application feel free to reach out to me at sing [mailto](${answers.email})  
-You can also check out my personal GitHub account here: <${answers.github}>
+### For more questions regarding the application feel free to reach out to me at <${answers.email}><br>  
+### You can also check out my personal GitHub account here: <${answers.github}>
 
 `;
 }
