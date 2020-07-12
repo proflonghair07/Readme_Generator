@@ -36,15 +36,29 @@ function promptUser() {
       message: "Choose a license for your application from the list below.",
       name: "license",
       choices: [
-        "GNU AGPLv3",
-        "GNU GPLv3",
-        "GNU LGPLv3",
-        "Mozilla Public 2.0",
-        "Apache 2.0",
+        "Mozilla%Public%2.0",
+        "Apache%2.0",
         "MIT",
-        "Boost Software 1.0",
-        "The Unlicense",
-        "None",
+        "Boost%Software%1.0",
+        "The%Unlicense",
+        "GNU%AGPLv3",
+        "GNU%GPLv3",
+        "GNU%LGPLv3",
+      ],
+    },
+    {
+      type: "list",
+      message: "Choose a the link to the license you chose.",
+      name: "licenseLink",
+      choices: [
+        "[Mozilla Public 2.0](https://www.mozilla.org/en-US/MPL/2.0/)",
+        "[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)",
+        "[MIT](https://choosealicense.com/licenses/mit/)",
+        "[Boost Software 1.0](http://zone.ni.com/reference/en-XX/help/373194E-01/cdaq-foss/boost-license-v-1-0/)",
+        "[The Unlicense](https://unlicense.org/)",
+        "[GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html)",
+        "[GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)",
+        "[GNU LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.html)",
       ],
     },
     {
@@ -67,8 +81,8 @@ function promptUser() {
 
 function generateREADME(answers) {
   return `
-# ${answers.title}
-
+# ${answers.title}<br>
+![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license}-lightgrey.svg)
 ## Table of Contents
 * [Description Of Application](#description-of-application)
 * [Usage Information](#usage-information)
@@ -91,7 +105,7 @@ function generateREADME(answers) {
 ### ${answers.test}
 
 ## Application License
-### ${answers.license}
+### This application uses the ${answers.licenseLink} license.
 
 ## How to contribute
 ### ${answers.contributing}
@@ -102,7 +116,16 @@ function generateREADME(answers) {
 
 `;
 }
+// license badge attempts to be made
+// function getBadgeLink() {
+//   let badgeLink;
+//   if (answers.license === "") {
+//     badgeLink = "https://www.gnu.org/licenses/agpl-3.0.html";
+//   }
+//   console.log(badgeLink);
+// }
 
+//
 promptUser()
   .then(function (answers) {
     const README = generateREADME(answers);
